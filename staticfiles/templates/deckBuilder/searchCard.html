@@ -1,0 +1,32 @@
+<div ng-controller="deckBuildCtrl">
+    <div class="thumbnail col-sm-12">
+        <div class="thumbnail col-sm-8">
+            <div class="row">
+                <div class="col-sm-12 card-pool">card pool</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 deck">deck pool</div>
+            </div>
+        </div>
+        <div class="thumbnail col-sm-4 search-container">search container</div>
+    </div>
+
+    <h3>Search Cards:</h3>
+    <form ng-submit="search()">
+        <input type="text" class="form-control" ng-model="search_card" />
+        <input class="btn btn-primary btn-md" type="submit" value="Search" />
+    </form>    
+
+    <h3>Search Result:</h3>
+    <div ng-repeat="card in search_result">
+        <div>{{ card.name }}</div>
+        <button ng-click="add_card($index)">Add Card</button>
+    </div>
+        
+
+    <h3>Deck({{ deck.length }} Cards):</h3> 
+    <div ng-repeat="card in deck">
+        <div>{{ card[0].name }}</div>
+        <img src="{{ card[0].editions[0].image_url }}" />
+    </div>    
+</div>

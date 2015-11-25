@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,500' rel='stylesheet' type='text/css'>
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+</head>
+
+<body ng-app="mtgJS">
+
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">MTGJS</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="login">Login</a></li>
+        <li><a ui-sref="deck">Build Deck</a></li>
+        <li><a ui-sref="gameSetup">Create Game</a></li>
+        <li><a ui-sref="play">Play</a></li>
+        <li><a ui-sref="search">Search</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <div ui-view></div>
+</div>
+
+</body>  
+<script src="js/app.js"></script>
+
+  <!-- Controllers -->
+  <script src="js/mtgJS/controllers/mainCtrl.js"></script>
+  <script src="js/counterApp/controllers/counterController.js"></script>
+  <script src="js/deckBuilder/controllers/deckBuildCtrl.js"></script>
+
+  <!-- Services -->
+  <script src="js/mtgJS/services/dieFactory.js"></script>
+  <script src="js/deckBuilder/services/deckFactory.js"></script>
+  <script src="js/mtgJS/services/cardManager.js"></script>
+  <script src="js/mtgJS/services/gameFactory.js"></script>
+  
+  
+
+  <!-- Directives -->
+  <script src="js/counterApp/directives/ngRightClick.js"></script>
+  <script src="js/mtgJS/directives/card.js"></script>
+  <script src="js/mtgJS/directives/hand.js"></script>
+  <script src="js/mtgJS/directives/library.js"></script>
+  <script src="js/mtgJS/directives/turnPhases.js"></script>
+</html>

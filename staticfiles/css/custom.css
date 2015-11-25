@@ -1,0 +1,179 @@
+/* Additional CSS */
+body {
+	font-family: "Roboto", "Helvetica Nueue", Helvetica, sans-serif, Arial;
+}
+
+.player-hud {
+  z-index:1;
+  background-color:black;
+  height:150px;
+  width:150px;
+  bottom:10px;
+}
+
+.play-container {
+  height:35vh;
+}
+
+.hand-container {
+  height:15vh;
+  padding:0;
+  margin:0;
+}
+
+.sel-box {
+  max-width: 420px;
+  min-width: 350px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.deck-build-container {
+  height:35%;
+  height:35vh;
+}
+
+.smaller-top-margin {
+  margin-top: 10px;
+}
+.library {
+  height:100%;
+}
+
+#counter {
+  position:absolute;
+  height:35px;
+  width:35px;
+}
+
+.white-counter {
+  background-color:white;
+  left: 60px;
+  top: 10px;
+}
+
+.green-counter {
+  bottom: 70px;
+  background-color:green;
+}
+
+.red-counter {
+  background-color:red;
+  right:15px;
+  bottom: 70px;
+}
+
+.black-counter {
+  bottom: 20px;
+  right: 30px;
+  border:solid;
+  border-width: 1px;
+  border-color:#D6D6D6;
+  background-color:black;
+}
+
+.blue-counter {
+  bottom: 20px;
+  left: 30px;
+  background-color:blue;
+}
+
+.no-padding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.line-adjustment {
+  line-height: 0px !important;
+}
+
+.vertical-center {
+  min-height: 90%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 90vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  margin-top: 40px;
+}
+
+#hand {
+  height:100%;
+}
+
+.no-gutter > [class*='col-'] {
+    margin-left:0;
+    margin-right:0;
+    padding-right:0;
+    padding-left:0;
+}
+
+.library {
+    margin-top: 15px;
+}
+.library-count {
+    position: absolute;
+    width: 80%;
+    top: 60%;
+    text-align: center;
+}
+
+.graveyard {
+    margin-top: 15px;
+    height: 116px;
+    width: 160px;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: black;
+}
+
+.card {
+    height: 100%;
+    width:116px; 
+    margin-right: 3px; 
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: black;
+    -webkit-transition: -webkit-transform 500ms; /* Safari */
+    transition: transform 500ms;
+}
+
+.cardTest {
+    height: 160px;
+    width:100px; 
+    margin-right: 3px; 
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: black;
+    -webkit-transition: -webkit-transform 500ms; /* Safari */
+    transition: transform 500ms;
+}
+
+.tapped{
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);
+}
+.roll-btn {
+    margin-top: 15px;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.turn-container {
+    height: 100vh; 
+}
+
+
+
+

@@ -1,0 +1,42 @@
+<div ng-controller="mainCtrl">
+      <div class="col-md-1 turn-container" style="background-color:black;">
+          <turn-phases></turn-phases>
+      </div>
+      <div class="col-md-2 deck-container" style="height:100vh; background-color:gray;">
+          <button class="btn btn-block btn-primary roll-btn" ng-click="dieRoll()">Roll: {{ roll_result }}</button>
+          <div ng-controller="counterController">
+              <div class="col-md-12 btn btn-success action" 
+                  ng-click="increment_hp()"
+                  ng-right-click="decrement_hp()">Health Points: {{ hp }}</div>    
+              <div class="col-md-12 btn btn-danger action" 
+                  ng-click="increment_red()"
+                  ng-right-click="decrement_red()">Red Counters: {{ red_counter }}</div>
+          </div>    
+          <div class="row row-centered">
+                  <library></library>
+          </div>
+
+          <div class="row row-centered">
+              <div class="col-md-8 col-centered graveyard">
+              </div>
+          </div>
+          <div class="row row-centered">
+              <div class="col-md-8 col-centered graveyard">
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-9 play-container">
+        <div class="row">
+            <div class="col-md-12 player-one" style="height:38vh; background-color:black"></div> 
+        </div>
+        <div class="row">
+          <div class="col-md-12 player-two" style="height:38vh; background-color:orange;"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 player-hand" style="height:24vh; background-color:white;">
+                <hand></hand>
+            </div>
+        </div>
+      </div>
+</div>
