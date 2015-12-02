@@ -1,1 +1,2 @@
-# mtg_django aka MTGJS
+# MTG-JS
+A Magic The Gathering Web App
